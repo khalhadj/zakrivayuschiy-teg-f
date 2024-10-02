@@ -19,6 +19,7 @@
     --accent-color: rgba(0, 0, 0, 0.6);
     --bg-color: #fff;
     --bg-gradient: linear-gradient(#e7e7e7, #1a1a1a);
+    --stroke-bg-color: #fff;
   }
 }
 
@@ -27,6 +28,7 @@
   --accent-color: rgba(0, 204, 20, 0.6);
   --bg-color: #000;
   --bg-gradient: linear-gradient(#007f0c, #004306);
+  --stroke-bg-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,5 +37,6 @@
     --accent-color: rgba(0, 204, 20, 0.6);
     --bg-color: #000;
     --bg-gradient: linear-gradient(#007f0c, #004306);
+    --stroke-bg-color: #000;
   }
 }

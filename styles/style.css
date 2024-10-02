@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+.button:focus {
+  outline: none;
+}
+
 /* Шапка */
 
 .header {
@@ -54,9 +58,6 @@
   font-size: 23px;
 }
 
-.header__theme-menu {
-}
-
 .theme-menu__list {
   display: flex;
   flex-direction: column;
@@ -68,11 +69,54 @@
   text-transform: uppercase;
 }
 
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  margin-bottom: 4px;
+  background-color: var(--main-color);
+  transition: width 300ms, background-color 0.5s;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+  background-color: var(--main-color);
+}
+
 .theme-menu__button:disabled {
+  color: var(--accent-color);
+  pointer-events: none;
+}
+
+/* ARROW */
+
+.theme-menu__button {
+  position: relative;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  margin-left: -20px;
+  animation: moveArrow 2s infinite ease-in-out;
+  height: 16px;
+  width: 13px;
   color: var(--accent-color);
 }
 
+@keyframes moveArrow {
+  0%,
+  100% {
+    left: 0;
+  }
+  50% {
+    left: 10%;
+  }
+}
+
 /* Карточки */
+
 .sprints__list {
   display: grid;
   margin-bottom: 100px;
@@ -106,7 +150,7 @@
 }
 
 .label {
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px var(--stroke-bg-color);
   position: absolute;
   right: 25px;
   top: 25px;
@@ -139,29 +183,40 @@
 }
 
 .card__like-button {
+  position: relative;
   font-size: 14px;
   border: 2px solid var(--main-color);
   padding: 10px 34px;
+  transition: color 0.5s ease;
 }
 
 .card__like-button:hover {
-  transition: width 500ms, background 2.5s ease;
-  background-color: #000;
+  color: var(--bg-color);
 }
 
-.card__like-button span {
-  background: transparent;
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--main-color);
+  transition: 0.3s;
 }
 
-.card__like-button span:hover {
-  transition: width 500ms, color 2.5s ease;
-  color: #fff;
+.card__like-button::after {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0%;
+  height: 36px;
+  background-color: var(--main-color);
+  transition: width 0.5s;
 }
 
-.heard {
-  color: var(--main-color);
+.card__like-button:hover::after {
+  width: 100%;
 }
 
-.heard:hover {
-  fill: black;
+.button__text {
+  position: relative;
+  z-index: 2;
 }
