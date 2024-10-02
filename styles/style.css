@@ -18,7 +18,22 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  background-image: var(--bg-gradient);
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--bg-color-primary) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--bg-color-primary) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--bg-color-secondary) 0.01%,
+      var(--bg-color-dark)
+    );
+
   background-attachment: fixed;
 }
 
@@ -136,8 +151,7 @@
 
 .sprint__image-wrap {
   position: relative;
-  width: 696;
-  height: 696;
+  aspect-ratio: 1 / 1;
   border-top: var(--border-style);
   border-bottom: var(--border-style);
 }
