@@ -10,6 +10,7 @@
   --accent-color: rgba(0, 0, 0, 0.6);
   --bg-color: #fff;
   --stroke-bg-color: #fff;
+  --btn-text-color: #fff;
 
   /* BGR COLORS */
 
@@ -24,6 +25,7 @@
     --accent-color: rgba(0, 0, 0, 0.6);
     --bg-color: #fff;
     --stroke-bg-color: #fff;
+    --btn-text-color: #fff;
 
     /* BGR COLORS */
 
@@ -38,6 +40,7 @@
   --accent-color: rgba(0, 204, 20, 0.6);
   --bg-color: #000;
   --stroke-bg-color: #000;
+  --btn-text-color: #00cc14;
 
   /* BGR COLORS */
 
@@ -52,7 +55,7 @@
     --accent-color: rgba(0, 204, 20, 0.6);
     --bg-color: #000;
     --stroke-bg-color: #000;
-
+    --btn-text-color: #00cc14;
     /* BGR COLORS */
 
     --bg-color-primary: #000;
