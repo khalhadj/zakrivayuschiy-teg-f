@@ -407,12 +407,25 @@
         </article>
       </li>
     </ul>
-    <button class="save-button button">
-      <svg class="save-icon" viewBox="0 0 40 40">
+    <button type="button" onclick="window['modal'].showModal();" aria-controls="modal" class="save__button button">
+
+      <svg class="save__icon" viewBox="0 0 40 40">
         <use href="./svg/floppy.svg#floppy" class="floppy"></use>
       </svg>
       <span class="button__text">Сохранить на память</span>
     </button>
+
+    <dialog class="modal" id="modal">
+      <div class="modal__grid">
+        <div class="modal__content">
+          <svg class="modal__icon" viewBox="0 0 40 40">
+            <use href="./svg/floppy.svg#floppy" class="floppy"></use>
+          </svg>
+          <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
+        </div>
+        <button type="button" class="modal__button button"><span class="button__text">Ок</span></button>
+      </div>
+    </dialog>
   </main>
   <script src="./scripts/like.js"></script>
 </body>
