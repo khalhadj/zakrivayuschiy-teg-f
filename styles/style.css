@@ -154,7 +154,7 @@
 
 .sprints__list {
   display: grid;
-  margin-bottom: 100px;
+  margin-bottom: 54px;
 }
 
 .sprints {
@@ -212,12 +212,13 @@
 
 .sprint__buttons {
   display: flex;
-  gap: 12px;
+  gap: 5px;
   justify-self: end;
 }
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--main-color);
+  outline-offset: -2px;
 }
 
 .card__like-button {
@@ -262,6 +263,14 @@
 
 /* Сердце  */
 
+.card__icon-button {
+  padding: 0;
+}
+
+.core {
+  overflow: hidden;
+}
+
 .contour {
   fill: var(--bg-color);
   transition: fill 0.3s linear 0.03s;
@@ -273,6 +282,18 @@
 
 .sparks {
   opacity: 0;
+}
+.is-liked .sparks {
+  animation: heart-sparks 0.3s ease-in 0.3s;
+}
+
+@keyframes heart-sparks {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .heart:hover .contour,
@@ -297,6 +318,20 @@
   fill: var(--heart-color);
 }
 
+.is-liked .heart {
+  transform-origin: center;
+  animation: heart 0.3s ease-in 0.1s 1 alternate;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
 /* Кнопка сохранить */
 
 .save-icon {
@@ -312,7 +347,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 100px;
+  margin-bottom: 105px;
   font-family: var(--accent-font);
   background-color: var(--bg-color);
   border: var(--border-style);
