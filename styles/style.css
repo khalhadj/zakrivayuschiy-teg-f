@@ -19,6 +19,7 @@
   min-block-size: 100dvb;
   font-family: var(--main-font);
   font-weight: var(--font-weight-medium);
+  font-variation-settings: "wght" 400 785;
   background-image: repeating-linear-gradient(to right,
       var(--bg-color-primary) 0 2px,
       transparent 2px 4px),
@@ -175,7 +176,7 @@
 }
 
 .label {
-  -webkit-text-stroke: 1px var(--stroke-bg-color);
+  text-shadow: 0 0 1px var(--stroke-bg-color);
   position: absolute;
   right: 25px;
   top: 25px;
@@ -378,4 +379,28 @@
 
 .brightness {
   filter: brightness(100%);
+}
+
+/* Медиазапросы */
+
+@media (width <=470px) {
+  .header__title {
+    font-size: 49px;
+  }
+
+  .header__subtitle {
+    font-size: 14px;
+  }
+
+  .save-button {
+    flex-direction: column;
+  }
+}
+
+@supports((text-stroke: 1px var(--stroke-bg-color)) or (-webkit-text-stroke: 1px var(--stroke-bg-color))) {
+  .label {
+    -webkit-text-stroke: 1px var(--stroke-bg-color);
+    text-stroke: 1px var(--stroke-bg-color);
+    text-shadow: none;
+  }
 }
