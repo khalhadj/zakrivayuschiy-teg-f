@@ -86,6 +86,7 @@
 }
 
 .theme-menu__button {
+  position: relative;
   text-transform: uppercase;
 }
 
@@ -110,10 +111,6 @@
 }
 
 /* ARROW */
-
-.theme-menu__button {
-  position: relative;
-}
 
 .theme-menu__button:disabled::before {
   content: "▶";
@@ -185,7 +182,6 @@
   font-family: var(--accent-font);
   font-size: 14px;
   color: var(--main-color);
-  text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
 }
