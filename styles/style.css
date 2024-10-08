@@ -163,7 +163,7 @@
 }
 
 .label {
-  text-shadow: 1px var(--stroke-bg-color);
+  text-shadow: 0 0 1px var(--stroke-bg-color);
   position: absolute;
   right: 25px;
   top: 25px;
