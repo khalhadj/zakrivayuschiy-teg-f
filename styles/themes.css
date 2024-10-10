@@ -5,12 +5,17 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-.theme-light {
+:root.theme-light {
   --main-color: #000;
   --accent-color: rgba(0, 0, 0, 0.6);
   --bg-color: #fff;
   --stroke-bg-color: #fff;
   --btn-text-color: #fff;
+
+  /* FONTS */
+
+  --font-main-wght: 400;
+  --font-title-wght: 700;
 
   /* BGR COLORS */
 
@@ -27,6 +32,11 @@
     --stroke-bg-color: #fff;
     --btn-text-color: #fff;
 
+    /* FONTS */
+
+    --font-main-wght: 400;
+    --font-title-wght: 700;
+
     /* BGR COLORS */
 
     --bg-color-primary: #d3d3d3;
@@ -35,12 +45,17 @@
   }
 }
 
-.theme-dark {
+:root.theme-dark {
   --main-color: #00cc14;
   --accent-color: rgba(0, 204, 20, 0.6);
   --bg-color: #000;
   --stroke-bg-color: #000;
   --btn-text-color: #00cc14;
+
+  /* FONTS */
+
+  --font-main-wght: 465;
+  --font-title-wght: 785;
 
   /* BGR COLORS */
 
@@ -56,6 +71,12 @@
     --bg-color: #000;
     --stroke-bg-color: #000;
     --btn-text-color: #00cc14;
+
+    /* FONTS */
+
+    --font-main-wght: 465;
+    --font-title-wght: 785;
+
     /* BGR COLORS */
 
     --bg-color-primary: #000;
