@@ -116,6 +116,10 @@
   transition: width 0.3s;
 }
 
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
 .theme-menu__button:focus-visible::after {
   width: 100%;
 }
@@ -262,12 +266,12 @@
 
 .contour {
   fill: var(--bg-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear;
 }
 
 .main-body {
   fill: var(--bg-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .sparks {
@@ -275,16 +279,24 @@
 }
 
 .is-liked .sparks {
-  animation: heart-sparks 0.3s ease-in 0.3s;
+  animation: heart-sparks 0.3s ease-in 0.3s alternate;
 }
 
-.heart:hover .contour,
+.heart:hover .contour {
+  fill: var(--main-color);
+  transition: fill 0.3s linear 0.03s;
+}
+
 .heart:hover .main-body {
   fill: var(--main-color);
   transition: fill 0.3s linear;
 }
 
-.card__icon-button:active .contour,
+.card__icon-button:active .contour {
+  fill: var(--heart-color);
+  transition: fill 0.3s linear 0.03s;
+}
+
 .card__icon-button:active .main-body {
   fill: var(--heart-color);
   transition: fill 0.3s linear;
@@ -428,6 +440,10 @@
 
   .header__title {
     font-size: 14px;
+  }
+
+  .label {
+    right: 11px;
   }
 
   .save__icon {
